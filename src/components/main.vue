@@ -27,7 +27,7 @@ export default {
        min-width: 300px;
        }
      .img-container{
-           height: 100vh;
+           min-height: 100vh;
            width: 100%;
            position: relative;
      }
@@ -35,7 +35,8 @@ export default {
          width: 100%;
      }
     .card{
-        width: 100%;
+         width: 100%;
+         min-width: 300px;
         background-color: purple;
         color: #fff;
         position: absolute;
@@ -63,4 +64,31 @@ export default {
         margin: 10px auto 20px;
         border-radius: 10px;
     }
+    /* media*/
+   @media screen and (min-width: 650px) {
+       .card{
+            top: 0;
+            border-radius: 0;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: rgba(141, 21, 131, 0.6);
+            color:rgb(221, 178, 217);
+       }
+       .card h1{
+         font-size: 55px;
+        }
+        .card p{
+           padding: 20px;
+           font-size: 23px;
+         }
+        .card a{
+           padding: 20px;
+           font-size: 25px;
+           color:rgb(221, 178, 217);
+         width: 180px;
+         }
+   } 
 </style>

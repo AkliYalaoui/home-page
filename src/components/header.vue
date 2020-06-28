@@ -57,6 +57,7 @@ export default {
 
      header{
            width: 100%;
+           min-width: 300px;
            background-color: #fff;
      }
      nav{
@@ -129,4 +130,37 @@ export default {
             color: #fff;
             font-size: 20px;
      } 
+
+     /* media for navigation menu*/
+      @media screen and (min-width: 792px) {
+           nav{
+                grid-template-columns: repeat(5,1fr);
+             }
+              .nav-brand{
+                    grid-column: 1/2;
+                }
+            .nav-menu{
+                display: none;
+                }
+           .nav-list{
+                background-color: transparent;
+                display: flex;
+                flex-direction: row;
+                height: auto;
+                grid-column: 2/5;
+                grid-row: 1;
+                }
+                .nav-list .nav-item{
+                    margin: auto;
+                    border-right: 1px solid #000;
+                }
+                 .nav-list .nav-item:last-of-type{
+                     border: none;
+                 }
+                .nav-list .nav-item .nav-link{
+                        text-decoration: none;
+                        color: purple;
+                        font-size: 23px;
+                } 
+      }
 </style>
